@@ -1,12 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, SafeAreaView } from 'react-native';
 
-// These lines have been updated to reference local assets.
-// Make sure you have 'enverga-logo.png' and 'profile.png' in your 'assets' folder.
 const universitySeal = require('./assets/enverga-logo.png');
 const studentPhoto = require('./assets/profile1.png');
 
-// We'll use this data to populate the UI.
 const studentData = {
   university: "MANUEL S. ENVERGA\nUNIVERSITY FOUNDATION",
   location: "LUCENA CITY, PHILIPPINES",
@@ -23,7 +20,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.cardContainer}>
-        {/* Top Header Section */}
+
         <View style={styles.header}>
           <Text style={styles.headerTextUniversity}>{studentData.university}</Text>
           <Text style={styles.headerTextLocation}>{studentData.location}</Text>
@@ -32,7 +29,6 @@ export default function App() {
           </View>
         </View>
 
-        {/* Middle Content Section */}
         <View style={styles.content}>
           {/* University Seal and Validation */}
           <View style={styles.sealAndInfoContainer}>
@@ -44,7 +40,6 @@ export default function App() {
             </View>
           </View>
 
-          {/* Student Photo and Details */}
           <View style={styles.studentInfoContainer}>
             <Image source={studentPhoto} style={styles.studentImage} />
             <View style={styles.studentDetails}>
@@ -55,14 +50,12 @@ export default function App() {
           </View>
         </View>
 
-        {/* Name and Student Number Section */}
         <View style={styles.nameAndNumberSection}>
           <Text style={styles.nameText}>{studentData.name}</Text>
           <Text style={styles.studentNumberTextLarge}>{studentData.studentNumber}</Text>
           <Text style={styles.studentNumberTextSmall}>Student Number</Text>
         </View>
 
-        {/* Bottom Footer Section */}
         <View style={styles.footer}>
           <Text style={styles.footerText}>{studentData.course}</Text>
         </View>
